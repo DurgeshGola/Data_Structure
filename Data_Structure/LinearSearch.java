@@ -38,6 +38,19 @@ public class LinearSearch {
         }
         return false;  // this return the false when the element is not exits
     }
+
+    //Q2: return the true  when found the element and false when not found using the linear search
+    public static boolean  StringSearching(String str, int target){
+        if(str.length()==0){
+            return false;
+        }
+        for(int i=0; i<str.length(); i++){
+            if(target == str.charAt(i)){
+                return true; // this  return true when the character is found
+            }
+        }
+        return false; // this return false when the character is not found
+    }
     public static void main(String[] args) {
         int[] arr = {10,80,50,60,70,40,30,90,20};
         int target = 40;
@@ -47,5 +60,9 @@ public class LinearSearch {
         System.err.println(ansElement);
         boolean ansTrue = linearSearchTrueAndFalse(arr, target);
         System.err.println(ansTrue);
+        String str = "durgesh";
+        char target2 = 'g';
+        boolean ansString = StringSearching(str, target2);
+        System.out.println(ansString);
     }
 }
